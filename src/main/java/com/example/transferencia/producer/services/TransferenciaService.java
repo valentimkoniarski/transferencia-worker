@@ -1,4 +1,4 @@
-package com.example.transferencia.services;
+package com.example.transferencia.producer.services;
 
 import dev.valentim.transferencia.Transferencia;
 import dev.valentim.transferencia.dto.TransferenciaDto;

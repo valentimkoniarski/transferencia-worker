@@ -1,6 +1,6 @@
-package com.example.transferencia.controllers;
+package com.example.transferencia.producer.controllers;
 
-import com.example.transferencia.services.TransferenciaService;
+import com.example.transferencia.producer.services.TransferenciaService;
 import dev.valentim.transferencia.dto.TransferenciaDto;
 import dev.valentim.transferencia.enuns.TransferenciaStatus;
 import lombok.RequiredArgsConstructor;

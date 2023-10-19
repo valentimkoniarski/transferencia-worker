@@ -1,4 +1,4 @@
-package com.example.transferencia.consumer.consumidor;
+package com.example.transferencia.consumer;
 
 import dev.valentim.key.Key;
 import dev.valentim.transferencia.Transferencia;
@@ -28,13 +28,6 @@ public class PixValidador {
     private static final Logger logger = LogManager.getLogger(PixValidador.class);
 
     @KafkaListener(topics = "pix-topic")
-    //@RetryableTopic(
-    //        backoff = @Backoff(value = 3000L),
-    //        attempts = "2",
-    //        autoCreateTopics = "true",
-    //        // Qual as exceptions que devem ser retentativas
-    //        include = KeyNotFoundException.class
-    //)
     public void processaPix(TransferenciaDto transferenciaDto) {
         logger.info("Transferencia recebida: %s", transferenciaDto.getIdentifier());
 
