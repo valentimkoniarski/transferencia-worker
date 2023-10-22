@@ -22,13 +22,25 @@
         <dependency>
             <groupId>dev.valentim</groupId>
             <artifactId>transferencia</artifactId>
-            <version>1.0.1</version>
+            <version>1.6.0</version>
         </dependency>
 
         <dependency>
             <groupId>dev.valentim</groupId>
             <artifactId>key</artifactId>
-            <version>1.0.1</version>
+            <version>1.6.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>dev.valentim.usuario</groupId>
+            <artifactId>usuario</artifactId>
+            <version>1.6.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>dev.valentim</groupId>
+            <artifactId>cliente</artifactId>
+            <version>1.6.0</version>
         </dependency>
 
         <dependency>
