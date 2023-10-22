@@ -23,8 +23,9 @@ public class TransferenciaService {
 
 
     public TransferenciaDto salvarPix(TransferenciaDto transferenciaDto) {
-        transferenciaRepository.save(Transferencia.toEntity(transferenciaDto));
-        kafkaTemplate.send("pix-topic", transferenciaDto.getIdentifier(), transferenciaDto);
+        Transferencia transferencia = Transferencia.toEntity(transferenciaDto);
+        transferenciaRepository.save(transferencia);
+        kafkaTemplate.send("pix-topic", String.valueOf(transferenciaDto.getIdentifier()), transferenciaDto);
         return transferenciaDto;
     }
 
