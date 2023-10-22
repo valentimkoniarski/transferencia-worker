@@ -1,3 +1,9 @@
+<b>Projetos envolvidos</b>
+- api-transferencia: https://github.com/valentimkoniarski/api-transferencia
+- transferencia-worker: https://github.com/valentimkoniarski/transferencia-worker
+- transferencia-models: https://github.com/valentimkoniarski/transferencia-models
+
+
 ### O que são Streams?
 
 - Processamento batch:
@@ -31,4 +37,3 @@ ajudam a processar esses volumes de dados sem problemas, garantindo que nenhum d
 seja escalável.
 
 
-mvn install:install-file -Dfile=target/Pix-1.0.0.jar -DgroupId=com.example.model -DartifactId=Pix -Dversion=1.0.0 -Dpackaging=jar
