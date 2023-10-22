@@ -26,7 +26,7 @@ import static org.apache.kafka.streams.StreamsConfig.*;
 
 @Configuration
 @EnableKafka
-@EnableKafkaStreams
+//@EnableKafkaStreams
 public class KafkaConfig {
 
     @Value(value = "${spring.kafka.bootstrap-servers:localhost:9092}")
@@ -41,15 +41,15 @@ public class KafkaConfig {
         return new DefaultKafkaProducerFactory<>(configProps);
     }
 
-    @Bean(name = KafkaStreamsDefaultConfiguration.DEFAULT_STREAMS_CONFIG_BEAN_NAME)
-    public KafkaStreamsConfiguration kafkaStreamsConfig() {
-        Map props = new HashMap<>();
-        props.put(APPLICATION_ID_CONFIG , "kafka-streams-demo-6");
-        props.put(BOOTSTRAP_SERVERS_CONFIG, bootstrapAddress);
-        props.put(DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String().getClass().getName());
-        props.put(DEFAULT_VALUE_SERDE_CLASS_CONFIG, PixSerdes.class);
-        return new KafkaStreamsConfiguration(props);
-    }
+//    @Bean(name = KafkaStreamsDefaultConfiguration.DEFAULT_STREAMS_CONFIG_BEAN_NAME)
+//    public KafkaStreamsConfiguration kafkaStreamsConfig() {
+//        Map props = new HashMap<>();
+//        props.put(APPLICATION_ID_CONFIG , "kafka-streams-demo-6");
+//        props.put(BOOTSTRAP_SERVERS_CONFIG, bootstrapAddress);
+//        props.put(DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String().getClass().getName());
+//        props.put(DEFAULT_VALUE_SERDE_CLASS_CONFIG, PixSerdes.class);
+//        return new KafkaStreamsConfiguration(props);
+//    }
 
     @Bean
     public KafkaTemplate<String, TransferenciaDto> kafkaTemplate() {
