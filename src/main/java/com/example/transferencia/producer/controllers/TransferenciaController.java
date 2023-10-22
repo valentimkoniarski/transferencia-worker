@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/pix")
+@RequestMapping("/transferencia")
 @RequiredArgsConstructor
 public class TransferenciaController {
 
@@ -22,7 +22,6 @@ public class TransferenciaController {
     @PostMapping
     public TransferenciaDto salvarPix(@RequestBody TransferenciaDto transferenciaDto) {
 
-        transferenciaDto.setIdentifier(UUID.randomUUID().toString());
         transferenciaDto.setDataTransferencia(LocalDateTime.now());
         transferenciaDto.setStatus(TransferenciaStatus.EM_PROCESSAMENTO);
 
